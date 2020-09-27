@@ -1,0 +1,35 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: var(--bodyFontSize);
+}
+
+.bodyContainer{
+    min-height: calc(100vh - #{$headerHeight} - #{$footerHeight} );
+    display: flex;
+    flex-direction: column;
+
+    @include from(l){
+        min-height: calc(100vh - #{$footerHeight} - #{$headerHeight}) + 7.4rem;
+    }
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    height: 100%;
+    max-width: 100%;
+}
+
+h1{
+    font-size: var(--h1FontSize);
+}

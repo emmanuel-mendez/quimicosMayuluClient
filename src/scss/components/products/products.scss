@@ -1,0 +1,384 @@
+@import "product.scss";
+// @import "buttonsMobile";
+// @import "buttonsDesktop";
+
+.products{
+    display: flex;
+    width: 100%;
+    margin-top: $headerHeight;
+    min-height: calc(100vh - #{$footerHeight} - #{$headerHeight});
+
+    @include from(l){
+        margin-top: $headerHeightDesktop;
+        min-height: calc(100vh - #{$footerHeight} - #{$headerHeight} + 7.4rem);
+    }
+
+    &__container{
+        width: 100%;
+
+        @include from(l){
+            width: 100%;
+        }
+    }
+
+    &__create{
+        height: 20rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(34, 48, 58);
+
+        @include from(l){
+            height: 25rem;
+        }
+    }
+
+    &__createTitle{
+        font-size: 2rem;
+        text-align: center;
+        color: white;
+        padding-bottom: .8rem;
+
+        @include from(l){
+            font-size: 3.4rem;
+            padding-bottom: 1.4rem;
+        }
+    }
+
+    &__createForm{
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1rem;
+
+        @include from(l){
+            width: 25%;
+            padding-bottom: 1.2rem;
+        }
+    }
+
+    &__formSection{
+        padding-bottom: .8rem;
+
+        @include from(l){
+            padding-bottom: 1.2rem;
+        }
+    }
+
+    &__createInput{
+        border-radius: .25em;
+        border: 1px solid $borderColor;
+        width: 100%;
+        height: 2.4rem;
+        padding-left: .8rem;
+        font-size: 1rem;
+        background-color: white;
+
+        @include from(l){
+            height: 2.8rem;
+            font-size: 1.2rem;
+        }
+    }
+
+    &__createButton{
+        width: 100%;
+        height: 2.4rem;
+        border-radius: .25em;
+        border: 1px solid #1291ed;
+        color: #1291ed;
+        font-size: 1rem;
+        cursor: pointer;
+
+        @include from(l){
+            height: 2.8rem;
+            font-size: 1.2rem;
+        }
+    }
+
+    &__error{
+        background-color: white;
+        visibility: hidden;
+        height: 2.4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        border-radius: .25em;
+        padding: 0 .4em 0 .4em;
+
+        @include from(l){
+            height: 2.8rem;
+            font-size: 1.2rem;
+            padding: 0 .5em 0 .5em;
+        }
+    }
+}
+
+.createProductError::placeholder{
+    color: #9b5f5f;
+}
+
+.createProductError{
+    visibility: visible;
+    color: #9b5f5f;
+    background-color: #ffebeb;
+    border: 1px solid #f7bbbb;
+}
+
+.products{
+
+    &__list{
+        width: 100%;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @include from(l){
+            padding: 1.5rem;
+        }
+    }
+
+    &__loadingListContainer{
+        width: 100%;
+        height: calc(100vh - #{$headerHeight} - 24rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    &__loadingListTitle{
+        font-size: 1.5rem;
+
+        @include from(l){
+            font-size: 2rem;
+        }
+    }
+
+    &__listTitle{
+        font-size: 1.8rem;
+        padding-bottom: 1rem;
+        color: #1291ed;
+
+        @include from(l){
+            font-size: 3rem;
+        }
+    }
+
+    &__gridProductsCard{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__productCard{
+        padding-bottom: 1rem;
+        display: flex;
+        justify-content: center;
+
+        @include from(l){
+            padding-bottom: 2rem;
+        }
+    }
+
+    &__eachProductCard{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        height: 22vh;
+        border-radius: .3rem;
+        border: 1px solid grey;
+
+        @include from(l){
+            width: 50%;
+            height: 36vh;
+        }
+    }
+
+    &__productsCardInfo{
+        height: 80%;
+        padding: .5rem .5rem 0 .5rem;
+        display: flex;
+
+        @include from(l){
+            height: 90%;
+            padding: 1.5rem 1.5rem 1rem 1.5rem;
+        }
+    }
+
+    &__productsCardImage{
+        width: 50%;
+        padding-bottom: .5rem;
+        padding-right: .25rem;
+        cursor: pointer
+    }
+
+    &__productsCardImageContainer{
+        height: 100%;
+        width: 100%;
+        background-color:  rgb(34, 48, 58);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        border-radius: .3rem;
+
+        @include from(l){
+            font-size: 1.5rem;
+        }
+    }
+
+    &__productsCardImageLink{
+        color: white;
+    }
+
+    &__productsCardImageText{
+        text-align: center;
+    }
+
+    &__productsCardContent{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        padding-bottom: .5rem;
+        padding-left: .25rem;
+    }
+
+    &__productsCardBody{
+        padding-top: .4rem;
+        font-size: .8rem;
+        text-align: center;
+
+        @include from(l){
+            font-size: 1.5rem;
+        }
+    }
+
+    &__productsCardLink{
+        color: #1291ed;
+    }
+
+    &__productsCardDescription{
+        margin-top: auto;
+        width: auto;
+        font-size: .6rem;
+        margin-left: auto;
+
+        @include from(l){
+            font-size: 1.1rem;
+        }
+    }
+
+    &__productsCardUsernameDescription{
+        text-align: right;
+        padding-bottom: .2rem;
+    }
+
+    &__productsCardCreatedAt{
+        text-align: right;
+        padding-bottom: .2rem;
+    }
+
+    &__productsCardPrice{
+        font-size: 1rem;
+        text-align: right;
+        padding-bottom: .5rem;
+
+        @include from(l){
+            font-size: 2rem;
+            
+        }
+    }
+
+    &__productsCardDetailsLink{
+        font-size: .6rem;
+        text-align: right;
+        color: #1291ed;
+
+        @include from(l){
+            font-size: 1rem;
+        }
+    }
+
+    &__productsCardInteract{
+        display: flex;
+        height: 20%;
+        border-top:  1px solid grey;
+
+        @include from(l){
+            height: 10%;
+        }
+    }
+
+    &__productsCardLikes{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__productsCardLike{
+        height: 100%;
+        width: 100%;
+    }
+
+    &__productsDislikeButton{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0 0 0 .1rem ;
+        border: none;
+        background-color: #1291ed;
+        color: white;
+        cursor: pointer;
+    }
+
+    &__productsLikeButton{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0 0 0 .3rem ;
+        border: none;
+        border-right: 1px solid grey;
+        background-color: white;
+        color: #808080;
+        cursor: pointer;
+    }
+
+    &__productsLikeIcon{
+        font-size: 1rem;
+        color:#808080;
+    }
+
+    &__productsDislikeIcon{
+        font-size: 1rem;
+        color: white;
+    }
+
+    &__productsCardComment{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    &__productsCardCommentLink{
+        font-size: 1rem;
+        padding-right: .1rem;
+        color:#808080;
+    }
+
+    &__productsCardCommentCount{
+        font-size: 1rem;
+        color: #808080;
+    }
+}

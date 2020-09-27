@@ -1,0 +1,55 @@
+.home{
+
+    &__buttonsMobile{
+
+        @include from(l){
+            display: none;
+        }
+    }
+
+    @include from(l){
+
+        &__buttonsDesktop{
+            height: 20rem;
+            width: 40rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__buttonsDescriptionDesktop{
+            font-size: 1.3rem;
+            padding-bottom: 1rem;
+            width: 38rem;
+        }
+
+        &__buttonsDescriptionParagraphDesktop{
+            padding-bottom: 1rem;
+            text-align: center;
+            color: white;
+        }
+
+        &__buttonsContainerDesktop{
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        &__buttonDesktop{
+            width: 8em;
+            height: 3em;
+            border-radius: 0.5em;
+            border: 1px solid #1291ed;
+            color: #1291ed;
+            font-size: 1.2rem;
+            opacity: .7;
+        }
+    }
+}
+
+.home__buttonDesktop:hover{
+    opacity: 1;
+    cursor: pointer;
+}

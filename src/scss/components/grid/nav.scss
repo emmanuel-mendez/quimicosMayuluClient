@@ -1,0 +1,126 @@
+.nav{
+
+    position: fixed;
+    top: $headerHeight;
+    right: -75vw;
+    height: calc(100vh - #{$headerHeight} - 1px);
+    width: 75vw;
+    background: #2a3b47;
+    transition: right .5s;
+    z-index: var(--zFixed);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include from(l){
+        position: relative;
+        left: 0;
+        top: 0;
+        background: transparent;
+        padding-top: 0;
+        height: auto;
+        width: auto;
+    }
+
+    &__menu{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        list-style: none;
+    
+        @include from(l){
+            display: flex;
+        }
+    }
+
+    &__username{
+        list-style: none;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
+
+.menuShow{
+    right: 0;
+}
+
+.menu{
+
+    &__item{
+        padding: 1.5rem 1.5rem;
+        border-bottom: 1px solid $borderColor;
+
+        @include from(l){
+            padding: .7rem 1.1rem;
+            border-bottom: none;
+        }
+    }
+
+    &__login{
+
+        @include from(l){
+            padding: .7rem 1.5rem;
+            border: 1px solid #1192ee;
+            border-radius: .3em;
+            cursor: pointer;
+        }
+    }
+
+    &__username{
+        max-width: 60vw;
+    }
+
+    &__link{
+        color: $borderColor;
+        font-size: 1rem;
+    
+        @include from(l){
+            color: $textColor;
+            font-size: 1rem;
+        }
+    }
+
+    &__linkExclamation{
+        padding-left: .2rem;
+        color:  rgb(235, 87, 87);
+        font-size: 1rem;
+    }
+
+    &__loginLink{
+
+        @include from(l){
+            font-weight: bold;
+            color: #1192ee;
+        }
+    }
+
+    &__registerLink{
+
+        @include from(l){
+            display: none;
+        }
+    }
+
+    &__usernameLink{
+        font-size: 1.2rem;
+        color: #1192ee;
+        max-width: 60vw;
+    }
+}
+
+.menu__login:hover{
+
+    @include from(l){
+        background-color: #1192ee;
+    }
+}
+
+.menu__loginLink:hover{
+
+    @include from(l){
+        color: white;
+    }
+}

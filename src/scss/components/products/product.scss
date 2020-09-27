@@ -1,0 +1,318 @@
+.product{
+    width: 100%;
+    margin-top: $headerHeight;
+    min-height: calc(100vh - #{$footerHeight} - #{$headerHeight});
+
+    @include from(l){
+        margin-top: $headerHeightDesktop;
+        min-height: calc(100vh - #{$footerHeight} - #{$headerHeight} + 7.4rem);
+    }
+
+    &__loadingContainer{
+        width: 100%;
+        height: calc(100vh - #{$headerHeight} - 24rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    &__loadingTitle{
+        font-size: 1.5rem;
+
+        @include from(l){
+            font-size: 2rem;
+        }
+    }
+
+    &__container{
+        width: 100%;
+        padding: 1.5rem 1.5rem 0 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__card{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 30vh;
+        border-radius: .3rem;
+        border: 1px solid grey;
+        margin-bottom: 1rem;
+
+        @include from(l){
+            width: 60%;
+            height: 45vh;
+        }
+    }
+
+    &__description{
+        display: flex;
+        padding: 1rem .5rem;
+        height: 80%;
+
+        @include from(l){
+            height: 90%;
+            padding: 1.5rem 1.5rem 1rem 1.5rem;
+        }
+    }
+
+    &__image{
+        width: 50%;
+        padding-right: .25rem;
+    }
+
+    @include from(l){
+        padding-right: .75rem;
+    }
+
+    &__imageContainer{
+        height: 100%;
+        width: 100%;
+        background-color:  rgb(34, 48, 58);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: .3rem;
+
+        @include from(l){
+            font-size: 1.5rem;
+        }
+    }
+
+    &__imageText{
+        font-size: .8rem;
+        color: white;
+        text-align: center;
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        padding-left: .25rem;
+
+        @include from(l){
+            padding-left: .75rem;
+        }
+    }
+
+    &__title{
+        padding-top: .4rem;
+        font-size: .8rem;
+        text-align: center;
+        color: #1291ed;
+
+        @include from(l){
+            font-size: 1.5rem;
+        }
+    }
+
+    &__information{
+        margin-top: auto;
+        width: auto;
+        font-size: .6rem;
+        margin-left: auto;
+
+        @include from(l){
+            font-size: 1.1rem;
+        }
+    }
+
+    &__usernameParagraph{
+        text-align: right;
+        padding-bottom: .2rem;
+    }
+
+    &__createdAtParagraph{
+        text-align: right;
+        padding-bottom: .2rem;
+    }
+
+    &__priceParagraph{
+        font-size: 1rem;
+        text-align: right;
+        padding-bottom: 1rem;
+
+        @include from(l){
+            font-size: 2rem;
+            
+        }
+    }
+
+    &__deleteButton{
+        background-color: white;
+        border-radius: .3em;
+        border: 1px solid $borderColor;
+        text-shadow: none;
+        cursor: pointer;
+        color: grey;
+        width: 100%;
+        height: 2.75rem;
+        padding: 0;
+        font-size: 1.2rem;
+    }
+
+    &__interact{
+        display: flex;
+        height: 20%;
+        border-top:  1px solid black;
+
+        @include from(l){
+            height: 10%;
+        }
+    }
+
+    &__likes{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__comment{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    &__commentLink{
+        font-size: 1rem;
+        padding-right: .1rem;
+        color:#808080;
+    }
+
+    &__commentCount{
+        font-size: 1rem;
+        color: #808080;
+    }
+
+    &__deleteButton{
+        background-color:#e7cdcd;
+        border-radius: .3em;
+        border: 1px solid  #9b5f5f;
+        text-shadow: none;
+        cursor: pointer;
+        color: black;
+    }
+}
+
+.product__deleteButton:hover{
+    color: black;
+    background-color: rgb(235, 87, 87);
+}
+
+.product{
+
+    &__comments{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__commentsTitle{
+        font-size: 1.5rem;
+        text-align: center;
+        color: #1291ed;
+        padding: 2.4rem 0 .5rem 0;
+    }
+
+    &__commentsForm{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__commentInput{
+        width: 100%;
+        border: none;
+        height: 3rem;
+        border: 1px solid grey;
+        border-radius: .3rem .3rem .3rem .3rem;
+        margin-bottom: .5rem;
+        padding-left: .5rem;
+
+        @include from(l){
+            width: 60%;
+        }
+    }
+
+    &__commentsButton{
+        width: 100%;
+        padding: 0;
+        height: 2.2rem;
+        font-size: 1rem;
+        color: #1291ed;
+        border: 1px solid #1291ed;
+        border-radius: .3rem .3rem .3rem .3rem;
+        margin-bottom: 2.4rem;
+        cursor: pointer;
+
+        @include from(l){
+            width: 60%;
+        }
+    }
+
+    &__commentsList{
+        width: 100%;
+        border-radius: .3rem;
+        border: 1px solid grey;
+        margin-bottom: 1.5rem;
+        font-size: 1rem;
+        display: flex;
+        flex-direction: column;;
+
+        @include from(l){
+            width: 60%;
+        }
+    }
+
+    &__commentDown{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding: .8rem .8rem .6rem .8rem;
+    }
+
+    &__commentContainer{
+        width: 50%;
+    }
+
+    &__commentsListUsername{
+        font-weight: bold;
+    }
+
+    &__commentsListBody{
+        word-wrap: break-word;
+        height: 100%;
+        padding-left: .4rem;
+    }
+
+    &__commentsListCreatedAt{
+        margin-top: auto;
+        color: grey;
+    }
+
+    &__commentDelete{
+        width: 100%;
+        height: 2.2rem;
+        border-radius: .01;
+        background-color: #f1e1e1;
+        font-size: 1.2rem;
+        color: black;
+        cursor: pointer;
+        border: 1px solid #9b5f5f;
+    }
+}
+
+.product__commentDelete:hover{
+    background-color: rgb(235, 87, 87);
+    color: black;
+}

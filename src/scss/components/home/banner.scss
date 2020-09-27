@@ -1,0 +1,74 @@
+.home__banner{
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ), url(../image/mobileBackgroundpng.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: calc(100vh - #{$headerHeight} - #{$headerHeight});
+    width: 100%;
+
+    @include from(l){
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ), url(../image/desktopBackgroundpng.jpg);
+    background-size: cover;
+    min-height: calc(100vh - #{$footerHeight} - #{$headerHeight} + 7.4rem);
+    width: 100%;
+    }
+}
+
+.banner{
+
+    &__container{
+        min-height: calc(100vh - #{$headerHeight});
+        padding: .8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        @include from(l){
+            width: 100%;
+            min-height: calc(100vh - #{$footerHeight} - #{$headerHeight} + 7.4rem);
+        }
+    }
+
+    &__titleContainer{
+        margin: auto;
+        align-self: center;
+    }
+
+    &__title{
+        color: #1292ee;
+        font-weight: bold;
+        -webkit-text-stroke: 0.5px black;
+        font-size: 2.8rem;
+        padding-bottom: .5rem;
+
+        @include from(l){
+            font-size: 5rem;
+        }
+
+    }
+    
+    &__subtitle{
+        color: #fff;
+        font-size: 2rem;
+    }
+
+    &__arrowContainer{
+        align-self: center;
+
+        @include from(l){
+            display: none;
+        }
+    }
+
+    &__downArrow{
+        color: white;
+        font-size: 3rem;
+    }
+}
+

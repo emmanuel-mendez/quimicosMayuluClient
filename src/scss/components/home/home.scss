@@ -1,0 +1,26 @@
+@import "banner";
+@import "buttonsMobile";
+@import "buttonsDesktop";
+
+@import "messagesInfo";
+@import "contact";
+
+.home{
+    display: flex;
+    width: 100%;
+    margin-top: $headerHeight;
+    min-height: calc(200vh - #{$footerHeight} - #{$headerHeight} - 3rem);
+
+    @include from(l){
+        margin-top: $headerHeightDesktop;
+        min-height: calc(100vh - #{$footerHeight} - #{$headerHeight} + 7.4rem);
+    }
+
+    &__container{
+        width: 100%;
+
+        @include from(l){
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,155 @@
+@import url('./css/index.css');
+
+
+.chat{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    height: 500px;
+    width: 80%;
+}
+
+.chatUsers{
+    background-color:white;
+    width: 25%;
+    border: 0.5px solid;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.chatMessages{
+    background-color:white;
+    width: 75%;
+    border: 0.5px solid;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    justify-content: space-between;
+    word-wrap: break-word;
+}
+
+.chatReverse{
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0 30px 10px 30px;
+}
+
+.formSentMessage{
+    display: flex;
+}
+
+.messageInput{
+    width: 98%;
+    height: 30px;
+
+}
+
+.messageInput::placeholder{
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.chatLeft{
+    cursor: pointer;
+    padding: 5px;
+    height: 71px;
+    font-size: 10px;
+    overflow: hidden;
+}
+
+.chatLeftSelected{
+    background-color: whitesmoke;
+    
+}
+
+.chatLeft:hover{
+    background-color: whitesmoke; 
+}
+
+.messageContainer{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.message{
+    margin: 10px 0;
+    border-radius: 3%;
+    display: flex;
+    max-width: 45%;
+    padding: 5px 5px 0 5px;
+}
+
+.message div{
+    padding: 0;
+}
+
+.sent{
+    background-color: rgba(0, 255, 255, 0.664);
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+}
+
+.received{
+    background-color: rgba(139, 250, 250, 0.644);
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+}
+
+.messageSentContainer{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+.moment{
+    font-size: 10px;
+    align-self: flex-end;
+}
+
+/* .reactButton{
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.reactionsList{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.sent .reactButton{
+    align-self: flex-end;
+}
+
+.received .reactButton{
+    align-self: flex-start;
+}
+
+.sent .reactionSelected{
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    top: 10px;
+    right: 10px;
+}
+
+.received .reactionSelected{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+.divReactionsSelected{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding: 2px;
+    font-size: 12px;
+} */
+

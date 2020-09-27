@@ -1,0 +1,60 @@
+.home{
+
+    &__buttonsDesktop{
+        display: none;
+    }
+
+    &__buttonsMobile{
+        height: calc(100vh - #{$footerHeight} - #{$headerHeight});
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__buttonsDescriptionMobile{
+        font-size: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    &__buttonsTitleDescriptionMobile{
+        color: #1291ed;
+        font-size: 3rem;
+        text-shadow: 0 0 2px;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    &__buttonsDescriptionParagraphMobile{
+        padding-bottom: 1rem;
+        text-align: center;
+    }
+
+    &__buttonsContainerMobile{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    &__buttonMobile{
+        width: 8em;
+        height: 3em;
+        border-radius: 0.5em;
+        border: 1px solid #1291ed;
+        color: #1291ed;
+        font-size: .9rem;
+    }
+
+    // &__buttonLoginMobile{
+
+    // }
+
+    // &__buttonRegisterMobile{
+
+    // }
+
+}
+
+
