@@ -40,7 +40,7 @@ export default function Footer() {
 
                 <div className=" footer__section footer__enterprise">
                     <div className="footer__enterpriseContainer footer__sectionContainer">
-                        <h2 className="footer__h2">Acerca de la empresa</h2> 
+                        <h2 className="footer__h2">Acerca de la empresa</h2>
                         <p className="footer__linkContainer footer__underline"><Link to="/about" className="footer__link">¿Qué es Químicos Mayulu?</Link></p>
                         <p className="footer__linkContainer footer__underline"><Link to="/team" className="footer__link">Equipo</Link></p>
                         <p className="footer__linkContainer footer__underline"><Link to="/principles" className="footer__link">Nuestros principios</Link></p>
