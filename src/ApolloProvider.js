@@ -11,7 +11,7 @@ import { WebSocketLink } from '@apollo/client/link/ws'
 import { getMainDefinition } from '@apollo/client/utilities'
 
 let httpLink = createHttpLink({
-    uri: 'https://still-everglades-05157.herokuapp.com/',
+    uri: 'https://quimicos-mayulu-server.herokuapp.com/',
 })
 
 const authLink = setContext((_, { headers }) => {
