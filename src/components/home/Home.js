@@ -31,7 +31,7 @@ export default function Home() {
 
                                 <Link to="/register">
                                     <button className="home__buttonLoginDesktop home__buttonDesktop">
-                                        Registrarse
+                                        Registrarses
                                     </button>
                                 </Link>
                             </div>
