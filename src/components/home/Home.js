@@ -10,7 +10,7 @@ export default function Home() {
 				<div className="home__banner">
 					<div className="banner__container">
 						<div className="banner__titleContainer">
-							<h2 className="banner__title">Químicos Mayulu C. A.</h2>
+							<h2 className="banner__title">Químicos Mayulu</h2>
 							<p className="banner__subtitle">Servicio de calidad</p>
 						</div>
 
@@ -26,13 +26,13 @@ export default function Home() {
 								<Link to="/login">
 									<button className="home__buttonLoginDesktop home__buttonDesktop">
 										Iniciar sesión
-                                    </button>
+									</button>
 								</Link>
 
 								<Link to="/register">
 									<button className="home__buttonLoginDesktop home__buttonDesktop">
 										Registrarse
-                                    </button>
+                  </button>
 								</Link>
 							</div>
 						</div>
@@ -58,13 +58,13 @@ export default function Home() {
 						<Link to="/login">
 							<button className="home__buttonLoginMobile home__buttonMobile">
 								Iniciar sesión
-                            </button>
+              </button>
 						</Link>
 
 						<Link to="/register">
 							<button className="home__buttonRegisterMobile home__buttonMobile">
 								Registrarse
-                            </button>
+              </button>
 						</Link>
 					</div>
 				</div>
