@@ -4,8 +4,8 @@ import { BrowserRouter, Switch } from 'react-router-dom';
 
 import './App.css';
 
-import {AuthProvider} from './context/auth'
-import {MessageProvider} from './context/message'
+import { AuthProvider } from './context/auth'
+import { MessageProvider } from './context/message'
 import DynamicRoute from './util/DynamicRoute'
 
 import HeaderNav from './components/grid/HeaderNav'
@@ -31,48 +31,48 @@ import Messages from './components/messages/Index';
 function App() {
 
 
-  return (
-    <ApolloProvider>
+	return (
+		<ApolloProvider>
 
-      <AuthProvider>
+			<AuthProvider>
 
-        <MessageProvider>
+				<MessageProvider>
 
-        <BrowserRouter>
+					<BrowserRouter>
 
-          <HeaderNav/>
+						<HeaderNav />
 
-          <div className="bodyContainer">
+						<div className="bodyContainer">
 
-          <Switch>
-            <DynamicRoute exact path="/" component={Home} guest/>
-            <DynamicRoute path="/products" component={Products} guest/>
-            <DynamicRoute exact path="/product/:productId" component={Product} guest/>
-            <DynamicRoute path="/messagesInfo" component={MessagesInfo} guest/>
-            <DynamicRoute path="/contact" component={Contact} guest/>
-            <DynamicRoute path="/about" component={About} guest/>
-            <DynamicRoute path="/team" component={Team} guest/>
-            <DynamicRoute path="/principles" component={Principles} guest/>
+							<Switch>
+								<DynamicRoute exact path="/" component={Home} guest />
+								<DynamicRoute path="/products" component={Products} guest />
+								<DynamicRoute exact path="/product/:productId" component={Product} guest />
+								<DynamicRoute path="/messagesInfo" component={MessagesInfo} guest />
+								<DynamicRoute path="/contact" component={Contact} guest />
+								<DynamicRoute path="/about" component={About} guest />
+								<DynamicRoute path="/team" component={Team} guest />
+								<DynamicRoute path="/principles" component={Principles} guest />
 
-            <DynamicRoute path="/register" component={Register} guest/>
-            <DynamicRoute path="/login" component={Login} guest/>
+								<DynamicRoute path="/register" component={Register} guest />
+								<DynamicRoute path="/login" component={Login} guest />
 
-            <DynamicRoute path="/userHome" component={UserHome} authenticated/>
-            <DynamicRoute path="/messages" component={Messages} authenticated />
-          </Switch>
+								<DynamicRoute path="/userHome" component={UserHome} authenticated />
+								<DynamicRoute path="/messages" component={Messages} authenticated />
+							</Switch>
 
-          </div>
+						</div>
 
-          <Footer/>
+						<Footer />
 
-        </BrowserRouter>
+					</BrowserRouter>
 
-        </MessageProvider>
+				</MessageProvider>
 
-      </AuthProvider>
+			</AuthProvider>
 
-    </ApolloProvider>
-  );
+		</ApolloProvider>
+	);
 }
 
 export default App;
