@@ -1,21 +1,26 @@
 import React from 'react'
+import principlesImage from '../../image/principles.png'
 
 export default function Principles() {
-    return (
-        <article className="principles">
-            
-            <div className="principles__container">
+	return (
+		<article className="principles">
 
-                <h2>¿Cuáles son nuestros principios?</h2>
+			<div className="principles__container">
 
-                <section className="principles__section">
+				<h2 className="principles__title">¿Cuáles son nuestros principios?</h2>
 
-                    <p className="principles__description"></p>
+				<section className="principles__section">
 
-                </section>
+					<p className="principles__description">
+						Nos esforzamos cada día por ofrecerte una atención educada y amigable, los mejores productos de limpieza por precios significativamente asequibles y una mano amiga comprometida con la limpieza de tu hogar.
+					</p>
 
-            </div>
+					<img src={principlesImage} alt="Imágen de principios" className="principles__image" />
 
-        </article>
-    )
+				</section>
+
+			</div>
+
+		</article>
+	)
 }

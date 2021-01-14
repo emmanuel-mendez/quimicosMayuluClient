@@ -1,21 +1,27 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import about from '../../image/quimicosMayulu.png';
 
 export default function About() {
-    return (
-        <article className="about">
-            
-            <div className="about__container">
+	return (
+		<article className="about">
 
-                <h2>¿Qué es Químicos Mayulu?</h2>
+			<div className="about__container">
 
-                <section className="about__section">
+				<h2 className="about__title">¿Qué es Químicos Mayulu?</h2>
 
-                    <p className="about__description"></p>
+				<section className="about__section">
 
-                </section>
+					<p className="about__description">
+						Químicos Mayulu C. A. es una empresa que se preocupa por brindarte los mejores productos de limpieza al mejor precio. <Link className="about__descriptionLink" to="/contact">Contáctanos</Link> o visita nuestras redes sociales para más información
+					</p>
 
-            </div>
+					<img src={about} alt="Logo" className="about__image" />
 
-        </article>
-    )
+				</section>
+
+			</div>
+
+		</article>
+	)
 }

@@ -1,0 +1,64 @@
+.team{
+	display: flex;
+	width: 100%;
+	margin-top: $headerHeight;
+	min-height: calc(100vh - #{$footerHeight}  - 3rem);
+
+	@include from(l){
+			margin-top: $headerHeightDesktop;
+			min-height: calc(100vh - #{$footerHeight} - #{$headerHeight} + 7.4rem);
+	}
+
+	&__container{
+			width: 100%;
+			padding: 2rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			@include from(l){
+					width: 100%;
+			}
+	}
+
+	&__title{
+			font-size: 2rem;
+			text-align: center;
+			color: #1291ed;
+			padding-bottom: 1.5rem;
+
+			@include from(l){
+					font-size: 3rem;
+					padding-bottom: 2rem;
+					width: 50%;
+			}
+	}
+
+	&__description{
+			font-size: .8rem;
+			text-align: center;
+			padding-bottom: 1rem;
+			width: 80%;
+			margin: auto;
+
+			@include from(l){
+					margin: auto;
+					font-size: 1.5rem;
+			}
+	}
+
+	&__image{
+		width: auto;
+		height: 14rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-top: 1rem;
+		margin: auto;
+
+		@include from(l){
+				height: 20rem;
+		}
+	}
+}

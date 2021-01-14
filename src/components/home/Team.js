@@ -1,21 +1,26 @@
 import React from 'react'
+import team from '../../image/team.png';
 
 export default function Team() {
-    return (
-        <article className="team">
-            
-            <div className="team__container">
+	return (
+		<article className="team">
 
-                <h2>¿Quiénes conforman nuestro equipo?</h2>
+			<div className="team__container">
 
-                <section className="team__section">
+				<h2 className="team__title">¿Quiénes conforman nuestro equipo?</h2>
 
-                    <p className="team__description"></p>
+				<section className="team__section">
 
-                </section>
+					<p className="team__description">
+						Nuestro equipo está administrado y dirigido por Brito P. y consta de un total de tres empleados de calidad que estarán encantados en atenderte.
+					</p>
 
-            </div>
+					<img src={team} alt="team" className="team__image" />
 
-        </article>
-    )
+				</section>
+
+			</div>
+
+		</article>
+	)
 }

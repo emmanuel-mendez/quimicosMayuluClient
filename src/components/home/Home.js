@@ -10,7 +10,7 @@ export default function Home() {
 				<div className="home__banner">
 					<div className="banner__container">
 						<div className="banner__titleContainer">
-							<h2 className="banner__title">Químicos Mayulu</h2>
+							<h2 className="banner__title">Mayulu Shop</h2>
 							<p className="banner__subtitle">Servicio de calidad</p>
 						</div>
 
