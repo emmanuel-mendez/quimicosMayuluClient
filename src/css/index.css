@@ -497,7 +497,7 @@ h1 {
   color: #1292ee;
   font-weight: bold;
   -webkit-text-stroke: 0.5px black;
-  font-size: 2.8rem;
+  font-size: 3rem;
   padding-bottom: 0.5rem;
 }
 @media screen and (min-width: 960px) {
