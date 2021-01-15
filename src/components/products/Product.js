@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { gql, useQuery, useMutation } from '@apollo/client'
 import moment from 'moment'
+import { Link } from 'react-router-dom'
 
 import { useAuthState } from '../../context/auth'
 import LikeButton from './LikeButton'
@@ -85,7 +86,6 @@ export default function Product(props) {
 		window.location.href = '/products'
 	}
 
-
 	let productMarkup
 	if (loading) {
 
@@ -110,6 +110,17 @@ export default function Product(props) {
 					currency: 'USD'
 				}
 			]
+		}
+
+		let paypalCheckoutButton
+		if (user) {
+			paypalCheckoutButton =
+				<PaypalCheckoutButton order={order} />
+		} else if (user && user.admin === true) {
+			paypalCheckoutButton = <span></span>
+		} else {
+			paypalCheckoutButton =
+				<p><Link className="product__loginLink" to="/login">Inicia sesión </Link>para comprar</p>
 		}
 
 		productMarkup = (
@@ -151,7 +162,9 @@ export default function Product(props) {
                                         </p>
 									</div>
 
-									<PaypalCheckoutButton order={order} />
+									{paypalCheckoutButton}
+
+
 
 								</div>
 
